@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <meta name="keywords"  content="La Pedrera, uruguay, hoteles, piscina, alojamiento">
-    <meta name="description" content="La Posada es un hotel que se encuentra en la pedrera que ofrece varios servicios como: piscina, aire acondicionado, espacios amplios, desayuno, mucama y mucho más!">
-    <title>Hotel La posada de la Pedrera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>La posada de la pedrera</title>
 </head>
 <body>
-    <header id="flexHeader" >
-        <a href="index.html" class="linkLogo"><img src="imagenes/logo.png" width="100" height="100" class="fotoHeader" alt="la imagen no se encuentra momentanemanete"></a><h1 id="tituloHeader"> La posada de la pedrera</h1>
+    <header class="flexHeader" >
+        <a href="index.html" class="flexheader__Logo"><img src="imagenes/logo.png" width="100" height="100" class="flexheader__logo--fotoheader"></a>
+        <h1 class="flexheader__tituloHeader">La posada de la pedrera</h1>
     </header>
     <!-- Termina el encabezado -->
-    <nav id="flexNav">
-        <a href="index.html" class="linkImportante4">Inicio</a>
-        <a href="servicios.html"class="linkImportante4" >Servicios</a>
-        <a href="Habitaciones.html" class="linkImportante4">Habitaciones</a>
-        <a href="ubicacion.html"class="linkImportante4" >Ubicación</a>
-        <a href="contacto.html" class="linkImportante4">Contacto</a>    
+    <nav class="flexNav">
+        <a href="index.html" class="flexNav__items">Inicio</a>
+        <a href="servicios.html"class="flexNav__items" >Servicios</a>
+        <a href="Habitaciones.html" class="flexNav__items">Habitaciones</a>
+        <a href="ubicacion.html"class="flexNav__items" >Ubicación</a>
+        <a href="contacto.html" class="flexNav__items">Contacto</a>    
     </nav>
      <!-- Termina el menu -->
-    <!-- Termina el menu -->
     <main class="mainAlterno"data-aos="fade-up"
     data-aos-duration="3000">
         <div id="grillaContacto" data-aos="fade-up">
-            <div id="areaContacto1"><h2>Contacto</h2></div>
-            <div id="areaContacto2"><h3>Reserva</h3></div>
+            <div id="areaContacto1"><h2  class="display-2">Contacto</h2></div>
+            <div id="areaContacto2"><h3  class="display-3">Reserva</h3></div>
             <div id="areaContacto3">
-                <ol>
+                <ol class="list-unstyled">
                     <ol>
                         <li class="liImportante">Pasos a seguir:</li>
                     </ol>
@@ -40,14 +39,19 @@
                 </ol>
             </div>
             <div id="areaContacto4">
-                <form action=>
-                    <fieldset>
-                        <legend>Contactenos!</legend>
-                        <label for="nombre">Introduzca su nombre:</label>
-                        <input type="text" id="nombre" placeholder="Nombre"><br>
-                        <label for="input">Introduzca su e-mail:</label>
-                        <input type="text"  id="input" placeholder="E-mail"><br>
-                        <label for="menu desplegable">Elija su Habitacíon:</label>
+                <form>
+                    <legend>Contactenos!</legend>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Introduzca su nombre:</label>
+                        <input type="text" id="nombre" placeholder="Nombre" class="form-control">
+                      <div id="emailHelp" class="form-text">no compartiremos tu e-mail con nadie</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="input" class="form-label">Introduzca su e-mail:</label>
+                        <input type="text"  id="input" placeholder="E-mail" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="menu desplegable" class="form-label">Elija su Habitacíon:</label>
                         <select  id="menu desplegable">
                             <option value="1">Habitacíon 1</option>
                             <option value="2">Habitacíon 2</option>
@@ -56,23 +60,27 @@
                             <option value="5">Habitacíon 5</option>
                             <option value="6">Habitacíon 6</option>
                             <option value="7">Habitacíon 7</option>
-                        </select><br>
-                        <label for="checkbox">Recibe promociones!</label>
-                        <input type="checkbox" id="checkbox" class="input"><br>
-                        <textarea  id="coment" cols="" rows="" placeholder="Deja un comentario!"></textarea><br>
-                        <label for="coment">Comentanos tus dudas!</label><br>
-                        <input type="reset">
-                        <input type="submit">
-                    </fieldset>
-                </form>
+                        </select>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <label for="checkbox"  class="form-check-label">Recibe promociones!</label>
+                        <input type="checkbox" id="checkbox" class="input" class="form-check-input">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <textarea  id="coment" cols="30" rows="10" placeholder="Deja un comentario!" ></textarea>
+                        <label for="coment" class="form-label">Comentanos tus dudas!</label>
+                    </div>
+                    <button type="reset" class="btn btn-warning">Restablecer</button>
+                    <button type="submit" class="btn btn-warning">enviar</button>
+                  </form>
             </div>
         </div>
     </main>
     <!-- finaliza el contenido principal -->
-    <footer id="flexFooter" data-aos="fade-up"> 
-        <div><h3 id="subtituloAlterno3" data-aos="zoom-in" >Contactanos!</h3><h4>Teléfono:123456789</h4></div> 
-        <div><h3 id="subtituloAlterno3" data-aos="zoom-in">Emprendimientos!</h3><a class="linkImportante3" href="https://www.instagram.com/up.markets/?utm_medium=copy_link"><img src="imagenes/upmarkets.png" alt="la imagen no se encuentra momentanemanete" class="upMarkets"></a></div> 
-        <div><h3 id="subtituloAlterno3" data-aos="zoom-in">Redes sociales!</h3><a href="https://www.facebook.com/PosadalaPedrera/" class="linkImportante2" ><img src="imagenes/facebook.png" alt="la imagen no se encuentra momentanemanete" width="70" height="70" class="fotoFooter"></a><a href="https://instagram.com/la_posada_de_la_pedrera?utm_medium=copy_link" class="linkImportante2"><img src="imagenes/instagram-logo-png-transparent-background-1024x1024-1-300x300.png" alt="la imagen no se encuentra momentanemanete" width="70" height="70" class="fotoFooter"></a></div>
+    <footer class="flexFooter" data-aos="fade-up"> 
+        <div><h3 class="flexFooter__subtituloAlterno3" data-aos="zoom-in" >Contactanos!</h3><h4>Teléfono:123456789</h4></div> 
+        <div><h3 class="flexFooter__subtituloAlterno3" data-aos="zoom-in">Emprendimientos!</h3><a class="flexFooter__linkImportante3" href="https://www.instagram.com/up.markets/?utm_medium=copy_link"><img src="imagenes/upmarkets.png" alt="" class="flexFooter__linkImportante3--upMarkets"></a></div> 
+        <div><h3 class="flexFooter__subtituloAlterno3" data-aos="zoom-in">Redes sociales!</h3><a href="https://www.facebook.com/PosadalaPedrera/" class="flexFooter__linkImportante2" ><img src="imagenes/facebook.png" alt="" width="70" height="70" class="flexFooter__linkImportante2--fotoFooter"></a><a href="https://instagram.com/la_posada_de_la_pedrera?utm_medium=copy_link" class="flexfooter__linkImportante2"><img src="imagenes/instagram-logo-png-transparent-background-1024x1024-1-300x300.png" alt="" width="70" height="70" class="flexFooter__linkImportante2--fotoFooter"></a></div>
     <!-- otros datos de interes -->
     </footer>
     <!-- finaliza el pie de pagina -->
@@ -80,5 +88,6 @@
     <script>
         AOS.init();
       </script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
